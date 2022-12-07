@@ -40,6 +40,8 @@ jobs:
         script: |
           add_path("/usr/local/test")
           print('Hej')
+          from pathlib import Path
+          print(Path(__file__))
           from app.core.config import Settings
           for variable in Settings.__fields__.keys():
             print('variable', variable)
