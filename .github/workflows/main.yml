@@ -41,7 +41,8 @@ jobs:
           add_path("/usr/local/test")
           print('Hej')
           from pathlib import Path
-          print(Path(__file__))
+          import os
+          print(os.listdir(Path(__file__).parent))
           from app.core.config import Settings
           for variable in Settings.__fields__.keys():
             print('variable', variable)
