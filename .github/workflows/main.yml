@@ -38,6 +38,7 @@ jobs:
       uses: jannekem/run-python-script-action@v1
       with:
         script: |
+          add_path("/usr/local/test")
           print('Hej')
           from app.core.config import Settings
           for variable in Settings.__fields__.keys():
